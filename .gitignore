@@ -1,0 +1,37 @@
+# OSX
+.DS_Store
+
+# IDE
+.idea
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/shares-snippets.code-snippets
+
+# test
+tmp/
+coverage/
+.nyc_output/
+.eslintcache
+test_output.json
+eslint_report.json
+lint_*_result.text
+tmp-eslintrc.json
+
+# Node.js
+node_modules/
+backend/node_modules/
+web-app/node_modules/
+shared/node_modules/
+npm-debug.log
+yarn-error.log
+
+# Dist
+backend/dist
+web-app/dist
+
+backend/env
+
+# Keep this
+!.gitkeep
