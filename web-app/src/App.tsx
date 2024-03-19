@@ -1,5 +1,5 @@
-import './App.css'
-import { postsClient } from './main';
+import '@Src/App.css'
+import { postsClient } from '@Src/main';
 
 function App() {
   const { data, isLoading } = postsClient.getPost.useQuery([], { params: {id: 1}});

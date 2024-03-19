@@ -13,13 +13,36 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+    "baseUrl": "./",
+    "sourceRoot": "/",
+    "inlineSources": true,
+    "sourceMap": true,
 
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@Src/*": [
+        "./src/*"
+      ],
+      "@Shared/*": [
+        "../shared/*"
+      ],
+      "@Root/*": [
+        "./*"
+      ]
+    },
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "../shared"
+  ],
+  "references": [
+    { "path": "./tsconfig.node.json" },      
+    { "path": "../shared" }
+  ]
 }

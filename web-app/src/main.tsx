@@ -1,11 +1,11 @@
-import App from './App.tsx'
-import './index.css'
+import App from '@Src/App.tsx'
+import '@Src/index.css'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { initQueryClient } from '@ts-rest/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { createRoot } from 'react-dom/client';
 
-import { contract } from '../../shared/contracts/contract'
+import { contract } from '@Shared/contracts/contract'
 
 
 export const postsClient = initQueryClient(contract, {
