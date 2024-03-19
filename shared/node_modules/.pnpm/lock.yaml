@@ -1,0 +1,41 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  '@ts-rest/core':
+    specifier: 3.33.1
+    version: 3.33.1(zod@3.22.4)
+  zod:
+    specifier: 3.22.4
+    version: 3.22.4
+
+devDependencies:
+  typescript:
+    specifier: 5.4.2
+    version: 5.4.2
+
+packages:
+
+  /@ts-rest/core@3.33.1(zod@3.22.4):
+    resolution: {integrity: sha512-ZAFr310dr/doIdyym8BbTiNmkq0jR5uI1Fo+JgyQjfellbtfXvBe+OK3Wldp1jPaPb9oEtDSEWhF0MsQTOrCWA==}
+    peerDependencies:
+      zod: ^3.22.3
+    peerDependenciesMeta:
+      zod:
+        optional: true
+    dependencies:
+      zod: 3.22.4
+    dev: false
+
+  /typescript@5.4.2:
+    resolution: {integrity: sha512-+2/g0Fds1ERlP6JsakQQDXjZdZMM+rqpamFZJEKh4kwTIn3iDkgKtby0CeNd5ATNZ4Ry1ax15TMx0W2V+miizQ==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+    dev: true
+
+  /zod@3.22.4:
+    resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
+    dev: false

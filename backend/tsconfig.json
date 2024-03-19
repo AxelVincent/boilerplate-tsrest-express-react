@@ -1,0 +1,71 @@
+{
+  "ts-node": {
+    "swc": true,
+    "pretty": true,
+    "transpileOnly": true
+  },
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "commonjs",
+    "outDir": "dist",
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "sourceRoot": "/",
+    "inlineSources": true,
+    "sourceMap": true,
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "stripInternal": true,
+    "incremental": true,
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@Src/*": [
+        "./src/*"
+      ],
+      "@Shared/*": [
+        "../shared/*"
+      ],
+      "@Root/*": [
+        "./*"
+      ]
+    },
+    "typeRoots": [
+      "./typedefs",
+      "./node_modules/@types"
+    ]
+  },
+    "references": [
+      {
+        "path": "../shared"
+      }
+    ],
+    "include": [
+      "../shared",
+      "src/**/*.ts",
+      "src/**/*.tsx",
+      "src/**/*.json",
+    ],
+    "exclude": [
+      "dist",
+      "node_modules",
+      "../common/dist",
+      "../common/**/*.test.ts",
+    ]
+  }
+
