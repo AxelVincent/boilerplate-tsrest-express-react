@@ -5,35 +5,24 @@
     "transpileOnly": true
   },
   "compilerOptions": {
-    "target": "ES2022",
-    "lib": ["ES2022"],
-    "module": "commonjs",
-    "outDir": "dist",
-    "strict": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "noImplicitThis": true,
-    "alwaysStrict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "moduleResolution": "node",
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "types": ["node"],
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
     "baseUrl": "./",
     "sourceRoot": "/",
     "inlineSources": true,
     "sourceMap": true,
-    "jsx": "react-jsx",
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "resolveJsonModule": true,
-    "emitDecoratorMetadata": true,
-    "skipLibCheck": true,
-    "stripInternal": true,
-    "incremental": true,
-    "isolatedModules": true,
-    "forceConsistentCasingInFileNames": true,
     "paths": {
       "@Src/*": [
         "./src/*"
@@ -65,7 +54,6 @@
       "dist",
       "node_modules",
       "../common/dist",
-      "../common/**/*.test.ts",
     ]
   }
 
