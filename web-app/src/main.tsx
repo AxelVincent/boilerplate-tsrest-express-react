@@ -7,19 +7,19 @@ import { createRoot } from 'react-dom/client'
 import { webAppContracts } from '@Shared/contracts/routes_web_app'
 
 export const apiClient = initQueryClient(webAppContracts, {
-	baseHeaders: {},
-	baseUrl: 'http://localhost:3333',
+  baseHeaders: {},
+  baseUrl: 'http://localhost:3333',
 })
 
 export const queryClient = new QueryClient()
 
 const Wrappers = () => {
-	return (
-		<QueryClientProvider client={queryClient}>
-			<App />
-			<ReactQueryDevtools />
-		</QueryClientProvider>
-	)
+  return (
+    <QueryClientProvider client={queryClient}>
+      <App />
+      <ReactQueryDevtools />
+    </QueryClientProvider>
+  )
 }
 
 const container = document.getElementById('root')

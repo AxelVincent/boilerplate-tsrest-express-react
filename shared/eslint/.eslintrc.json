@@ -18,7 +18,7 @@
     "rules": {
         "indent": [
             "error",
-            "tab"
+            2
         ],
         "linebreak-style": [
             "error",
@@ -29,6 +29,10 @@
             "single"
         ],
         "semi": [
+            "error",
+            "never"
+        ],
+        "eol-last": [
             "error",
             "never"
         ]

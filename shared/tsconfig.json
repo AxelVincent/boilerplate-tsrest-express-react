@@ -83,7 +83,7 @@
     "forceConsistentCasingInFileNames": true
   },
   "include": [
-    "./contracts/*.ts",
+    "./contracts",
   ],
   "exclude": []
 }
