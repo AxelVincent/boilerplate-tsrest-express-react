@@ -3,7 +3,8 @@ import cors from 'cors'
 import bodyParser from 'body-parser'
 import { createExpressEndpoints, initServer } from '@ts-rest/express'
 
-import { contract } from '@Shared/contracts/contract'
+import { webAppContracts } from '@Shared/contracts/routes_web_app'
+import { webAppHandlers } from './routes_web_app'
 
 const app = express()
 
@@ -12,27 +13,9 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 const s = initServer()
+const router = s.router(webAppContracts, webAppHandlers)
 
-const router = s.router(contract, {
-	getPost: async ({ params: { id } }) => {
-		const post = { id, title: 'title', content: 'content' }
-
-		return {
-			status: 200,
-			body: post
-		}
-	},
-	createPost: async ({ body: body_ }) => {
-		const { title, body } = body_
-		const post = { id: 1, title, content: body }
-		return {
-			status: 201,
-			body: post
-		}
-	},
-})
-
-createExpressEndpoints(contract, router, app, {
+createExpressEndpoints(webAppContracts, router, app, {
 	responseValidation: true
 })
 
