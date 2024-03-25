@@ -34,7 +34,7 @@
       ],
       "@Root/*": [
         "./*"
-      ]
+      ],
     },
   },
   "references": [
@@ -44,7 +44,7 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     "../shared"
-  ],
+, "src/components/mode-toggle.tsx", "src/components/theme-provider.tsx"  ],
   "exclude": [
     "dist",
     "node_modules",

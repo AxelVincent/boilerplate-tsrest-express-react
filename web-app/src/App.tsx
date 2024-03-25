@@ -1,27 +1,36 @@
-import '@Src/App.css'
-import { apiClient } from '@Src/main'
+import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom'
+import PostsPage from '@Src/components/PostsPage'
+import Layout from './Layout'
+import HomePage from '@Src/components/HomePage'
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: (
+      <Layout>
+        <Outlet />
+      </Layout>
+    ),
+    children: [
+      {
+        index: true,
+        element: <HomePage />,
+      },
+      {
+        path: '/posts',
+        element: <PostsPage />,
+      },
+    ],
+  },
+])
 
 function App() {
-  const { data, isLoading } = apiClient.posts.getPost.useQuery([], { params: {id: 1}})
-  
-  if (isLoading) {
-    return <div>Loading...</div>
-  }
-
-  if (data?.status !== 200) {
-    return <div>Error</div>
-  }
-
-  //const [file, setFile] = React.useState<File | null>(null);
-  return (
-    <div>
-      <h1>Post from post-service</h1>
-      <div key={data.body.id}>
-        <h1>{data.body.title}</h1>
-        <p>{data.body.content}</p>
-      </div>
-    </div>
+  return (<RouterProvider router={router} fallbackElement={<Fallback />} />
   )
+}
+
+function Fallback() {
+  return <p>Performing initial data load</p>
 }
 
 export default App
